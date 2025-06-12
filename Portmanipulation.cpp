@@ -17,9 +17,13 @@ void Manipulate::pin(int pin, bool state) {
   }
 }
 
+Manipulate Manip;
+
 void Stop::microsecs(unsigned long delayTime) {
   unsigned long startTime = micros();
   while (micros() - startTime < delayTime) {
     //wait
   }
 }
+
+Stop Stop;
