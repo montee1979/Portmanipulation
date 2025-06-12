@@ -26,4 +26,4 @@ void Stop::microsecs(unsigned long delayTime) {
   }
 }
 
-Stop Stop;
+Stop stop;
