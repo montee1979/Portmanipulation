@@ -15,6 +15,6 @@ class Stop {
 		void microsecs(unsigned long delayTime);
 };
 
-extern Stop Stop;
+extern Stop stop;
 
 #endif
