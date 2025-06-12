@@ -8,9 +8,13 @@ class Manipulate {
 		void pin(int pin, bool state);
 };
 
+extern Manipulate Manip;
+
 class Stop {
 	public:
 		void microsecs(unsigned long delayTime);
 };
+
+extern Stop Stop;
 
 #endif
