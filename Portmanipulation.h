@@ -10,11 +10,12 @@ class Manipulate {
 
 extern Manipulate Manip;
 
-class Stop {
+class pause {
 	public:
 		void microsecs(unsigned long delayTime);
+		void millisecs(unsigned long delayTime);
 };
 
-extern Stop stop;
+extern pause Pause;
 
 #endif
