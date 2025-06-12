@@ -19,11 +19,18 @@ void Manipulate::pin(int pin, bool state) {
 
 Manipulate Manip;
 
-void Stop::microsecs(unsigned long delayTime) {
+void pause::microsecs(unsigned long delayTime) {
   unsigned long startTime = micros();
   while (micros() - startTime < delayTime) {
     //wait
   }
 }
 
-Stop stop;
+void pause::millisecs(unsigned long delayTime){
+  delayTime = delayTime * 1000;
+  unsigned long startTime = micros();
+  while (micros() - startTime < delayTime) {
+    //wait
+  }
+}
+pause Pause;
