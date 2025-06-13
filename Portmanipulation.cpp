@@ -1,17 +1,17 @@
 #include "Portmanipulation.h"
 
-void pins::pinset(int pin, bool state) {
+void pins::pinset(int pin, int state) {
   if (pin >= 0 && pin <= 7) {
-    if (state == true) {
+    if (state == 1) {
       PORTD |= (1 << pin);
-    } else if (state == false) {
+    } else if (state == 0) {
       PORTD &= ~(1 << pin);
     }
   } else if (pin >= 8 && pin <= 13) {
     pin = pin - 8;
-    if (state == true) {
+    if (state == 1) {
       PORTB |= (1 << pin);
-    } else if (state == false) {
+    } else if (state == 0) {
       PORTB &= ~(1 << pin);
     }
   }

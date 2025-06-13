@@ -5,7 +5,7 @@
 
 class pins {
 	public:
-		void pinset(int pin, bool state);
+		void pinset(int pin, int state);
 		void pinmode(int pin, int state);
 };
 
