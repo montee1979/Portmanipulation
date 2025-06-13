@@ -6,6 +6,7 @@
 class Manipulate {
 	public:
 		void pin(int pin, bool state);
+		void pinmode(int pin, int state);
 };
 
 extern Manipulate Manip;
