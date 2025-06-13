@@ -3,13 +3,13 @@
 
 #include <Arduino.h>
 
-class Manipulate {
+class pins {
 	public:
-		void pin(int pin, bool state);
+		void pinset(int pin, bool state);
 		void pinmode(int pin, int state);
 };
 
-extern Manipulate Manip;
+extern pins Pins;
 
 class pause {
 	public:
