@@ -1,6 +1,6 @@
 #include "Portmanipulation.h"
 
-void Manipulate::pinset(int pin, bool state) {
+void pins::pinset(int pin, bool state) {
   if (pin >= 0 && pin <= 7) {
     if (state == true) {
       PORTD |= (1 << pin);
@@ -17,7 +17,7 @@ void Manipulate::pinset(int pin, bool state) {
   }
 }
 
-void Manipulate::pinmode(int pin, int state) {
+void pins::pinmode(int pin, int state) {
   if (pin >= 0 && pin <= 7) {
     if (state == 1) {
       DDRD |= (1 << pin);
@@ -33,7 +33,7 @@ void Manipulate::pinmode(int pin, int state) {
   }
 }
 
-Manipulate Manip;
+pins Pins;
 
 void pause::microsecs(unsigned long delayTime) {
   unsigned long startTime = micros();
