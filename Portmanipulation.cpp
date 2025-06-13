@@ -1,6 +1,6 @@
 #include "Portmanipulation.h"
 
-void Manipulate::pin(int pin, bool state) {
+void Manipulate::pinset(int pin, bool state) {
   if (pin >= 0 && pin <= 7) {
     if (state == true) {
       PORTD |= (1 << pin);
@@ -13,6 +13,22 @@ void Manipulate::pin(int pin, bool state) {
       PORTB |= (1 << pin);
     } else if (state == false) {
       PORTB &= ~(1 << pin);
+    }
+  }
+}
+
+void Manipulate::pinmode(int pin, int state) {
+  if (pin >= 0 && pin <= 7) {
+    if (state == 1) {
+      DDRD |= (1 << pin);
+    } else if (state == 0) {
+      DDRD &= ~(1 << pin);
+    }
+  } else if (pin >= 8 && pin <= 13) {
+    if (state == 1) {
+      DDRB |= (1 << (pin - 8));
+    } else if (state == 0) {
+      DDRB &= ~(1 << (pin - 8));
     }
   }
 }
